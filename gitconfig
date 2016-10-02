@@ -48,7 +48,7 @@
   mergeoptions = --no-edit
 [user]
 	email = gderala@gmail.com
-	name = Gokhan Derala
+	name = gokhanDerala
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
