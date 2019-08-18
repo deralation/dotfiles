@@ -54,11 +54,15 @@ else
   echo "export BUNDLER_EDITOR=\"${bundler_editor}\"" >> zshrc
 fi
 
-git add .
-git commit --message "My identity for @lewagon in the gitconfig"
-git push origin master
+printf "fira code font..."
+brew tap caskroom/fonts
+brew cask install font-fira-code
+echo "ok"
 
-git remote add upstream git@github.com:lewagon/dotfiles.git
+printf "vscode..."
+ln -s -f ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+~/dotfiles/vscode/install_extensions.sh
+echo "ok"
 
 zsh ~/.zshrc
 
